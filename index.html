@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <section class="ingreso-texto">
+      <img class="logo" src="Img/Logo.png" alt="Logo de alura" />
+      <div class="encriptacion">
+        <textarea
+          name="texto-encriptado"
+          class="input-texto"
+          id="input-texto"
+          cols="60"
+          rows="10"
+          placeholder="Ingrese el texto aqui"
+          required
+        ></textarea>
+        <label class="label-reglas"
+          ><i class="bi bi-exclamation-circle-fill"></i> Solo letras minúsculas
+          y sin acentos</label
+        >
+        <div class="botones-input">
+          <button onclick="encriptarTexto();" class="boton-encriptar">
+            Encriptar
+          </button>
+          <button onclick="desencriptarTexto()" class="boton-desencriptar">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="retorno-texto">
+      <div class="rectangulo" id="rectangulo">
+        <p class="mensaje-rectangulo" id="mensaje-rectangulo-1">
+          Ningún mensaje fue encontrado
+        </p>
+        <p class="mensaje-rectangulo" id="mensaje-rectangulo-2">
+          Ingresa el texto que desees encriptar o desencriptar
+        </p>
+        <textarea
+          class="texto-resultado"
+          name="retorno-texto"
+          id="texto-resultado"
+          cols="30"
+          rows="10"
+          readonly
+        ></textarea>
+        <button onclick="copiarTexto()" class="boton-copiar" id="boton-copiar">
+          Copiar
+        </button>
+      </div>
+      <div class="imagenes-resultado" id="imagenes-resultado">
+        <img class="muñeco" src="Img/Muñeco.png" alt="Persona con lupa" />
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
